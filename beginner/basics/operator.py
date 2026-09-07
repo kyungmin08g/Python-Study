@@ -1,116 +1,118 @@
 # [ 논리 연산자(Logical Operator) ]
-# not 연산자: not 연산자는 True를 False로, False를 True로 바꿉니다.
-# or 연산자: or 연산자는 두 개의 피연산자 중 하나라도 True이면 True를 반환합니다.
-# and 연산자: and 연산자는 두 개의 피연산자가 모두 True이면 True를 반환합니다. 하나라도 False이면 False를 반환합니다.
+# - not 연산자: not 연산자는 True를 False로, False를 True로 바꿉니다.
+# - or 연산자: or 연산자는 두 개의 피연산자 중 하나라도 True이면 True를 반환합니다.
+# - and 연산자: and 연산자는 두 개의 피연산자가 모두 True이면 True를 반환합니다. 하나라도 False이면 False를 반환합니다.
 
 is_active_first: bool = True
 is_active_second: bool = False
 
-print(f"and 연산: {is_active_first and is_active_second}") # False
-print(f"or 연산: {is_active_first or is_active_second}") # True
-print(f"not 연산: {not is_active_first}") # False
+print(f"and 연산: {is_active_first and is_active_second}") # (terminal print: and 연산: False)
+print(f"or 연산: {is_active_first or is_active_second}") # (terminal print: or 연산: True)
+print(f"not 연산: {not is_active_first}") # (terminal print: not 연산: False)
 
+# -----------------------------------------------------------------------------------------------
 # [ 산술 연산자(Arithmetic Operator) ]
 # Python의 산술 연산자는 덧셈(+), 뺄셈(-), 곱셈(*), 나눗셈(/(실수형 몫), //(정수형 몫), %(나머지)), 거듭제곱(**) 연산자가 있습니다.
 
 a: int = 10
 b: int = 5
 
-print(f"(덧셈) a + b = {a + b}") # 15
-print(f"(뺄셈) a - b = {a - b}") # 5
-print(f"(곱셈) a x b = {a * b}") # 50
-print(f"(나눗셈) a ÷ b = {a / b} (몫(실수))") # 2.0 (Python의 /는 항상 나눗셈 결과를 실수(float)로 반환합니다.)
-print(f"(나눗셈) a ÷ b = {a // b} (몫(정수))") # 2 (/ 했을 때 실수(float)로 반환되는 것을 방지하기 위해 //를 사용하면 몫(정수)로 반환됩니다.)
-print(f"(나눗셈) a ÷ b = {a % b} (나머지)") # 0
-print(f"(거듭제곱) a ** b = {a ** b}") # 100000 (= 10의 5승)
+print(f"(덧셈) a + b = {a + b}") # (terminal print: (덧셈) a + b = 15)
+print(f"(뺄셈) a - b = {a - b}") # (terminal print: (뺄셈) a - b = 5)
+print(f"(곱셈) a x b = {a * b}") # (terminal print: (곱셈) a x b = 50)
+print(f"(나눗셈) a ÷ b = {a / b} (몫(실수))") # (terminal print: (나눗셈) a ÷ b = 2.0 (몫(실수))) Python의 /는 항상 나눗셈 결과를 실수(float)로 반환합니다.
+print(f"(나눗셈) a ÷ b = {a // b} (몫(정수))") # (terminal print: (나눗셈) a ÷ b = 2 (몫(정수))) / 했을 때 실수(float)로 반환되는 것을 방지하기 위해 //를 사용하면 몫(정수)로 반환됩니다.
+print(f"(나눗셈) a ÷ b = {a % b} (나머지)") # (terminal print: (나눗셈) a ÷ b = 0 (나머지))
+print(f"(거듭제곱) a ** b = {a ** b}") # (terminal print: (거듭제곱) a ** b = 100000) = 10의 5승
 
+# -----------------------------------------------------------------------------------------------
 # [ 비교 연산자(Comparison Operator) ]
 # Python의 비교 연산자는 같음(==), 다름(!=), 크거나 같음(>=), 작거나 같음(<=), 작음(<), 큼(>) 연산자가 있습니다. (Java와 동일)
 
 c: int = 20
 
-print(f"(같음) c = 20: {c == 20}") # True
-print(f"(다름) c != 21: {c != 20}") # False
-print(f"(크거나 같음) c >= 20: {c >= 20}") # True
-print(f"(작거나 같음) c <= 20: {c <= 20}") # True
-print(f"(작음) c < 21: {c < 21}") # True
-print(f"(큼) c > 19: {c > 19}") # True
+print(f"(같음) c = 20: {c == 20}") # (terminal print: (같음) c = 20: True)
+print(f"(다름) c != 21: {c != 20}") # (terminal print: (다름) c != 21: False)
+print(f"(크거나 같음) c >= 20: {c >= 20}") # (terminal print: (크거나 같음) c >= 20: True)
+print(f"(작거나 같음) c <= 20: {c <= 20}") # (terminal print: (작거나 같음) c <= 20: True)
+print(f"(작음) c < 21: {c < 21}") # (terminal print: (작음) c < 21: True)
+print(f"(큼) c > 19: {c > 19}") # (terminal print: (큼) c > 19: True)
 
+# -----------------------------------------------------------------------------------------------
 # [ 대임 연산자(Assignment Operator) ]
-
 # 계산을 위한 초기 변수
-d = 32 # 나중에 나눗셈(/=) 연산을 하면 float type이 나오기 때문에 타입 유추로 선언해 주겠습니다.
+d = 32 # 나중에 나눗셈(/=) 연산을 하면 float type이 나오기 때문에 타입 추론으로 선언해주겠습니다.
 
 # d = 기존 값 + 2
 d += 2
-print(f"32 + 2 = {d}") # 34
+print(f"32 + 2 = {d}") # (terminal print: "32 + 2 = 34)
 
 # d = 기존 값 - 2
 d -= 2
-print(f"34 - 2 = {d}") # 32
+print(f"34 - 2 = {d}") # (terminal print: "34 - 2 = 32)
 
 # d = 기존 값 x 4
 d *= 4
-print(f"32 x 4 = {d}") # 128
+print(f"32 x 4 = {d}") # (terminal print: 32 x 4 = 128)
 
 # d = 기존 값 ÷ 2
 d //= 2
-print(f"(몫(정수)) 128 ÷ 2 = {d}") # 64
+print(f"(몫(정수)) 128 ÷ 2 = {d}") # (terminal print:(몫(정수)) 128 ÷ 2 = 64)
 
 # d = 기존 값 ÷ 2
 d /= 2 # (/= 연산이기 때문에 float type이 나와 실수로 표시됩니다.)
-print(f"(몫(실수)) 64 ÷ 2 = {d}") # 32.0
+print(f"(몫(실수)) 64 ÷ 2 = {d}") # (terminal print: (몫(실수)) 64 ÷ 2 = 32.0)
 
 # d = 기존 값 ÷ 3 (나머지)
 d %= 3
-print(f"(나머지) 32.0 ÷ 3 = {d}") # 2.0
+print(f"(나머지) 32.0 ÷ 3 = {d}") # (terminal print: (나머지) 32.0 ÷ 3 = 2.0)
 
 # d = 기존 값의 2승
 d **= 2
-print(f"2.0의 3승: {d}") # 4.0
+print(f"2.0의 3승: {d}") # (terminal print: 2.0의 3승: 4.0)
 
 # 바다코끼리 연산자(Walrus Operator)라고 불리는 대입 연산자가 있습니다. (:= 키워드 사용)
 # 초반에는 굳이 사용할 필요 없지만 알아두면 좋을 것 같아 작성합니다.
-message: str = "Hello, Python!" # total 14 words
+message: str = "Hello, Python!"
 
 # message 변수의 문자열 길이를 length에 대입하고 length가 12보다 클 때 print를 출력하게 작성하였습니다.
 if (length := len(message)) > 12:
-    print(f"total words: {length} words") # 14
+    print(f"total words: {length} words") # (terminal print: total words: 14 words)
 
+# -----------------------------------------------------------------------------------------------
 # [ 멤버십 연산자(Membership Operator) ]
 # 특정 값이나 요소가 list, tuple, str, dict 같은 자료형에 포함되어 있는지 확인하는 연산자입니다. (in 키워드 사용)
 names: list[str] = ["Kim", "Lee", "Park"]
 
-print("Kim" in names) # True ("Kim"이 names 안에 있는가?를 질의하는 코드입니다.)
-print("Choi" not in names) # True ("Choi"가 names 안에 없는가?를 질의하는 코드입니다.)
+print("Kim" in names) # (terminal print: True) "Kim"이 names 안에 있는가?를 질의하는 코드입니다.
+print("Choi" not in names) # (terminal print: True) "Choi"가 names 안에 없는가?를 질의하는 코드입니다.
 
 from typing import Any
 
-users: dict[str, Any] = {
-    "name": "Kyungmin",
-    "age": 20
-}
+users: dict[str, Any] = { "name": "Kyungmin", "age": 20 }
 
-print("name" in users) # True (dict에서는 기본적으로 key로 검색을 합니다.)
+print("name" in users) # (terminal print: True) dict에서는 기본적으로 key로 검색을 합니다.
 
+# -----------------------------------------------------------------------------------------------
 # [ 식별 연산자(Identity Operator) ]
 x = None # (None은 null과 동일)
 
 if x is None:
-    print("값이 없습니다!")
-elif x is not None: # 변수 x가 None이 아니면 실행됩니다.
-    print("값이 있습니다!") # 출력 안 됨
+    print("값이 없습니다!") # (terminal print: 값이 없습니다!)
+elif x is not None: # 변수 x가 None이 아닐 경우
+    print("값이 있습니다!") # else가 아니기 때문에 실행되지 않습니다.
 
-# 중요!! == 연산자와 is 연산자는 동일한가? -> X
+# { == 연산자와 is 연산자는 동일한가? } - X
 # == 연산자는 값이 같은지를 판별합니다. (일반적으로 값 비교에서 사용합니다.)
 y = [1, 2, 3]
 z = [1, 2, 3]
 
-print(y == z) # True
+print(y == z) # (terminal print: True)
 
 # is 연산자는 같은 객체인지 판별합니다. (객체의 동일성에 사용됩니다.)
-print(y is z) # False
+print(y is z) # (terminal print: False)
 
+# -----------------------------------------------------------------------------------------------
 # [ 비트 연산자(Bitwise Operator) ]
 # 컴퓨터는 숫자를 내부적으로 2진수(Binary)로 표현하기 때문에 비트 연산자는 주어진 값을 각각 0, 1을 대상으로 연산합니다.
 num_frist: int = 7 # (= 0000 0111)
@@ -122,7 +124,7 @@ num_second: int = 5 # (= 0000 0101)
 # ----------
 #       0101(= 5)
 # 둘 다 1인 상태여야 함으로 1 0은 0으로 연산됩니다. (1 0: X, 1 1: O)
-print(num_frist & num_second) # 5
+print(num_frist & num_second) # (terminal print: 5)
 
 # OR(|) 연산 설명
 #   7 = 0111
@@ -130,7 +132,7 @@ print(num_frist & num_second) # 5
 # ----------
 #       0111(= 7)
 # 둘 중 하나만 1인 상태여도 되므로 1 0도 1로 연산됩니다. (1 0: O, 1 1: O)
-print(num_frist | num_second) # 7
+print(num_frist | num_second) # (terminal print: 7)
 
 # XOR(^) 연산 설명
 #   7 = 0111
@@ -138,7 +140,7 @@ print(num_frist | num_second) # 7
 # ----------
 #       0010(= 2)
 # 서로 다르면 1로 연산합니다. (1 1: X, 0 0: X, 1 0: O) 즉, 같다면 0, 다르면 1로 연산합니다.
-print(num_frist ^ num_second) # 2
+print(num_frist ^ num_second) # (terminal print: 2)
 
 # NOT(~) 연산 설명
 # 참고! Python의 int는 고정된 8bit / 32bit 정수가 아닙니다. 즉, 메모리가 허용하는 한 숫자의 크기에 제한 없이 무한히 큰 정수를 표현할 수 있습니다.
@@ -165,24 +167,24 @@ print(num_frist ^ num_second) # 2
 #   = 8
 #
 #   따라서 1111 1000 = -8
-#   결과적으로 ~x = -(x + 1) 관계식을 기억하면 됩니다. (쉬움)
-print(~num_frist) # -8
+#   결과적으로 ~x = -(x + 1) 관계식을 기억하면 됩니다. (암기 시 쉬움)
+print(~num_frist) # (terminal print: -8)
 
 # << 연산자는 왼쪽으로 비트를 이동시킵니다.
 # 7 = 0000 0111
 # 5 = 0000 0101
 # 여기서 num_second만큼 켜진 비트를 왼쪽으로 밀어줍니다. 즉, 1110 0000
 # 켜진 비트만 더해 보자면 128 + 64 = 192 + 32 = 224가 나오는 것을 볼 수 있습니다.
-print(num_frist << num_second) # 224
+print(num_frist << num_second) # (terminal print: 224)
 
 # >> 연산자는 오른쪽으로 비트를 이동시킵니다.
 # 7 = 0000 0111
 # 5 = 0000 0101
 # 여기서 num_second만큼 켜진 비트를 오른쪽으로 밀어줍니다. 즉, 0000 0000
 # 켜진 비트가 없기 때문에 0이 됩니다.
-print(num_frist >> num_second) # 0
+print(num_frist >> num_second) # (terminal print: 0)
 
-# [ 비트 연산자(Bitwise Operator) - 비트 마스킹(Bit Masking) ]
+# { 비트 마스킹(Bit Masking) }
 # 어떤 숫자의 특정 비트가 켜져 있는지 확인할 수 있으며, 이를 비트 마스킹(Bit Masking)이라고 합니다.
 value = 6
 mask = 2
@@ -195,10 +197,11 @@ mask = 2
 # --------
 #    0010(= 2) -> 두 번째 비트가 켜져 있음을 알 수 있습니다.
 if value & mask:
-    print(f"두 번째 비트가 켜져 있습니다.") # 두 번째 비트가 켜져 있습니다.
+    print(f"두 번째 비트가 켜져 있습니다.") # (terminal print: 두 번째 비트가 켜져 있습니다.)
 
-# [ 비트 연산자(Bitwise Operator) - 응용 ]
-# 문제. IP 주소 192.168.10.8의 네트워크 주소를 구하시오. (Subnet Mask = 255.255.255.240(= CIDR /28))
+# -----------------------------------------------------------------------------------------------
+# [ 응용 ]
+# 문제) IP 주소 192.168.10.8의 네트워크 주소를 구하시오. (Subnet Mask = 255.255.255.240(= CIDR /28))
 
 ip: list[int] = [192, 168, 10, 8]
 subnet_mask: list[int] = [255, 255, 255, 240]
@@ -217,4 +220,4 @@ net_mask = subnet_mask[3]
 #    0000 0000(= 0)
 # 
 # 따라서 192.168.10.8의 네트워크 주소는 192.168.10.0이 됩니다.
-print(f"Network Address: {ip[0]}.{ip[1]}.{ip[2]}.{net_value & net_mask}") # 192.168.10.0
+print(f"Network Address: {ip[0]}.{ip[1]}.{ip[2]}.{net_value & net_mask}") # (terminal print: Network Address: 192.168.10.0)
